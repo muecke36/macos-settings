@@ -90,3 +90,4 @@ postman
 postman-agent
 vlc
 commander-one
+macsyzones
