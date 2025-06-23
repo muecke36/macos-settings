@@ -9,3 +9,7 @@
 ### Install Packages
 
 `xargs brew install < homebrew_packages.txt`
+
+## Install AppStore Apps
+
+`./install-apps.sh`
