@@ -79,6 +79,14 @@ font-fira-code
 gimp
 git-credential-manager-core
 izip
-keepassxc
 microsoft-azure-storage-explorer
 powershell
+onlyoffice
+vscodium
+nvm
+onedrive
+google-chrome
+postman
+postman-agent
+vlc
+commander-one
