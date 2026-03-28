@@ -91,3 +91,4 @@ postman-agent
 vlc
 commander-one
 macsyzones
+karabiner-elements
