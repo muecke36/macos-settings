@@ -5,6 +5,24 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Alt + ^/° (über Tab) -> Cmd + < (Zwischen Fenstern einer App wechseln)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": { "mandatory": ["left_option"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "non_us_backslash",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "AltGr (Right Option) + Key for Windows-style Special Characters",
                         "manipulators": [
                             {
@@ -183,7 +201,7 @@
                         ]
                     },
                     {
-                        "description": "Windows: Ctrl + A/C/V/X zu Mac: Cmd + A/C/V/X",
+                        "description": "Windows: Ctrl + A/V/X zu Mac: Cmd + A/V/X",
                         "manipulators": [
                             {
                                 "from": {
@@ -196,22 +214,6 @@
                                 "to": [
                                     {
                                         "key_code": "a",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["shift", "caps_lock", "option"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "c",
                                         "modifiers": ["command"]
                                     }
                                 ],
@@ -244,6 +246,38 @@
                                 "to": [
                                     {
                                         "key_code": "x",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Windows: Ctrl + C zu Mac: Cmd + C (Ignoriert in Terminals für SIGINT)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^io\\.alacritty$",
+                                            "^net\\.kovidgoyal\\.kitty$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["shift", "caps_lock", "option"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
                                         "modifiers": ["command"]
                                     }
                                 ],
