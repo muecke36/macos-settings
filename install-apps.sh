@@ -10,3 +10,5 @@ mas install 497799835  # Xcode
 mas install 6469021132 # PDFgear
 mas install 1473079126 # Cleaner One
 mas install 1035236694 # Commander One
+mas install 6476456257 # Pixodesk SVG
+mas install 1295203466 # Windows App

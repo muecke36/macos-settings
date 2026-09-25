@@ -92,3 +92,13 @@ vlc
 commander-one
 macsyzones
 karabiner-elements
+claude
+cursor
+grok-bot
+handbrake-app
+herdr
+music-assistant/tap/music-assistant
+nomachine
+openwhispr
+orbstack
+owncloud
